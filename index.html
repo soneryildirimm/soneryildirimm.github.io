@@ -1,8 +1,197 @@
 <html>
   <head>
     <title>Soner Yıldırım</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap&subset=latin-ext");
+* {
+  font-family: Montserrat;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-image: url("https://pbs.twimg.com/media/DMDIKcyWsAEsKDj.jpg");
+  background-size: cover;
+}
+body .login {
+  background-color: #05132d;
+  text-align: center;
+  padding: 80px 35px 200px 35px;
+  border-radius: 45px;
+  transition: 0.3s;
+  position: relative;
+}
+body .login:hover {
+  border-radius: 5px;
+}
+body .login .infos {
+  position: relative;
+}
+body .login .infos form {
+  display: flex;
+  flex-direction: column;
+}
+body .login .infos form input {
+  margin-bottom: 20px;
+  height: 25px;
+  width: 250px;
+  padding: 0 10px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+}
+body .login .infos form input#pass {
+  margin-bottom: 40px;
+}
+body .login .infos form input::placeholder {
+  color: black;
+}
+body .login .infos form input:focus {
+  border: 2px solid #72cc3f !important;
+  transition: 0.3s;
+}
+body .login .infos form .button {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  padding: 5px 40px;
+  background-color: #72cc3f;
+  border: none;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+body .login .infos form .button:hover {
+  border-radius: 24px;
+}
+body .login .bg {
+  margin-bottom: 50px;
+  display: inline-block;
+  position: relative;
+}
+body .login .bg .eyes {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+  margin: 5px;
+  background-color: #fff;
+}
+body .login .bg .eyes .eyes-ball {
+  width: 60%;
+  height: 60%;
+  background-color: #000;
+  border-radius: 50%;
+  top: 40%;
+  position: absolute;
+  left: 40%;
+}
+body .forget {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body .forget h5 {
+  color: #fff;
+  font-size: 12px;
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+}
+body .forget h5:hover {
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+
+input,
+.forget {
+  display: none;
+}
+
+    </style>
+    
    </head>
     <body>
-      <h1 style="color: #ddd;">Hello World</h1>
+          
+<div class="login">
+  <img style="width: 120px;" src="https://seeklogo.net/wp-content/uploads/2012/11/carolina-panthers-logo-vector.png" alt="">
+  <div id=one class="bg">
+    <div class='eyes'>
+      <div class="eyes-ball"></div>
+    </div>
+    <div class='eyes'> 
+      <div class="eyes-ball"></div>
+    </div>
+  </div>
+
+  <div class="infos">
+    <form>
+      <input id="email" type="text" placeholder="Email" value="xxxxxx@gmail.com">
+      <input id="pass" type="password" placeholder="Password">
+      <button id="login" class="button" type="submit">Login</button>
+    </form>
+  </div>
+  <div class="forget">
+    <h5 id="forget-pass">Forget password ?</h5>
+  </div>
+</div>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script>
+      $(document).ready(function(){
+  $("input").show(500)
+  $(".forget").fadeIn(700)
+  $(".bg").hide()
+  $(window).resize(function() {
+    var width = $(window).width();
+    var height = $(window).height();
+    $("body").mousemove(function() {
+      var fTop = Math.round(((event.pageY / height) * 100) / 2);
+      var fLeft = Math.round(((event.pageX / width) * 100) / 2);
+      $('.eyes-ball').animate({
+        'top': fTop + '%',
+        'left': fLeft + '%'
+      },5);
+    });
+  }).resize();
+
+  $("#pass").focus(function(){
+    $("img").hide(200,function(){
+      $(".bg").slideDown(200)
+    }) 
+  }) 
+
+  $("#pass").focusout(function(){
+      $(".bg").slideUp(200,function(){
+        $("img").show(200)
+        
+      })
+  })
+})
+
+$('#pass').keypress(
+  function(){
+    $(".eyes-ball").animate({
+      top: "50%",
+      left: "20%"
+     
+    },10);
+  }
+);
+
+
+      </script>
+      
     </body>
 </html>
