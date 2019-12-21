@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700&display=swap');
+
+$mainFont: 'Muli',
+sans-serif;
+$aqua: #08fdcc;
+$black: #1d1d1d;
+$darkBlack: #181818;
+$white: #ffffff;
+$grey: #4d4d4c;
+$secondGrey: #515152;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: $mainFont;
+    height: 100%;
+    width: 100%;
+    background-color: $black;
+    display: flex !important;
+    overflow: hidden !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: $black; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: $darkBlack; 
+  }
+
+nav {
+    background-color: $darkBlack;
+    display: inline-flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    .nav__logo {
+        font-size: 18px;
+        color: $white;
+        font-weight: bold;
+        padding: 40px 0;
+        background-color: #000;
+    }
+
+    .nav__links {
+        display: flex;
+        flex-direction: column;
+
+        .nav__item {
+            color: $grey;
+            padding: 15px;
+            font-size: 20px;
+            position: relative;
+        }
+
+        .nav__item_home {
+
+            &:after {
+                content: "HOME";
+                display: inline-block;
+                font-size: 11px;
+                color: $aqua;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+            }
+
+
+
+            &:hover:after {
+                opacity: 1;
+                transition: .3s;
+            }
+        }
+
+        .nav__item_about {
+
+            &:after {
+                content: "ABOUT";
+                display: inline-block;
+                font-size: 11px;
+                color: $aqua;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+            }
+
+            &:hover:after {
+                opacity: 1;
+                transition: .3s;
+            }
+        }
+
+        .nav__item_skills {
+
+            &:after {
+                content: "SKILLS";
+                display: inline-block;
+                font-size: 11px;
+                color: $aqua;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+            }
+
+            &:hover:after {
+                opacity: 1;
+                transition: .3s;
+            }
+        }
+
+        .nav__item_works {
+
+            &:after {
+                content: "WORKS";
+                display: inline-block;
+                font-size: 11px;
+                color: $aqua;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+            }
+
+            &:hover:after {
+                opacity: 1;
+                transition: .3s;
+            }
+        }
+
+        .nav__item_contact {
+
+            &:after {
+                content: "CONTACT";
+                display: inline-block;
+                font-size: 11px;
+                color: $aqua;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+            }
+
+            &:hover:after {
+                opacity: 1;
+                transition: .3s;
+            }
+        }
+
+        .asd {
+            &:hover {
+                i {
+                    opacity: 0;
+                }
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+
+            &::after {
+                content: "ASD";
+                display: inline-block;
+                font-size: 11px;
+                color: $aqua;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+            }
+        }
+    }
+
+    .nav__item_size-small {
+        color: $secondGrey;
+        display: block;
+
+        &:hover {
+            color: $aqua !important;
+        }
+    }
+}
+
+.home-page {
+    background-color: $black;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .home-page__content {
+        width: 501px;
+
+        .home-page__header {
+            color: $white;
+            font-size: 50px;
+            margin-bottom: 50px;
+        }
+
+        .home-page__button {
+            padding: 10px 18px;
+            color: $aqua;
+            border: 1px solid $aqua;
+            text-decoration: none;
+            font-weight: lighter;
+            display: inline-flex;
+            
+        }
+    }
+}
+
+.about-page {
+    background-color: $black;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .about-page__content {
+        width: 500px;
+
+        .about-page__header {
+            color: $aqua;
+            font-size: 70px;
+            margin-bottom: 50px;
+        }
+
+        .about-page__text {
+            color: $white;
+        }
+    }
+}
+
+.skill-page {
+    background-color: $black;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .skill-page__content {
+        width: 500px;
+
+        .skill-page__header {
+            color: $aqua;
+            font-size: 70px;
+            margin-bottom: 50px;
+        }
+
+        .skill-page__text {
+            color: $white;
+        }
+    }
+}
+
+.works-page {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+
+    img {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .test {
+        display: flex;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .home-page__content {
+
+
+        .home-page__header {
+            font-size: 40px !important;
+        }
+    }
+
+    // .about-page__content {
+    //     width: 240px !important;
+
+    .about-page__header {
+        font-size: 40px !important;
+    }
+
+    .skill-page__header {
+        font-size: 40px !important;
+    }
+}
+
+// .skill-page__content {
+//     width: 240px !important;
+
+// .test {
+//     flex-direction: column !important;
+// }
+
+@media (max-width: 991px) {
+
+    .works-page {
+        overflow-y: scroll !important;
+        align-items: flex-start;
+    }
+
+    .test {
+        flex-direction: column !important;
+
+        img {
+            max-width: 600px !important;
+        }
+    }
+}
+
+
+@media (max-width: 546px) {
+
+    //     .home-page__content {
+    //         max-width: 250px;
+    //     }
+
+
+    // }
+
+    // @media (max-width: 414px) {
+
+    //     .home-page__content {
+    //         max-width: 250px;
+    //     }
+
+    .works-page {
+        align-items: center;
+    }
+}
+
+[class*=" imghvr-"] figcaption,
+[class^=imghvr-] figcaption {
+    background-color: $darkBlack;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h5 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+}
+
+[class*=" imghvr-shutter-in-"]:after,
+[class*=" imghvr-shutter-in-"]:before,
+[class^=imghvr-shutter-in-]:after,
+[class^=imghvr-shutter-in-]:before {
+    background-color: $aqua;
+}
+
+main {
+    width: 100%;
+
+}
+
+section {
+    position: relative;
+    z-index: 1;
+    background-color: initial !important;
+}
+
+.nav {
+    position: relative;
+    z-index: 1;
+}
+
+
+.page {
+    display: none;
+}
+
+.bg_blue {
+    color: $aqua !important;
+}
+
+.bg_dark {
+    color: $darkBlack !important;
+}
+
+canvas {
+    position: fixed;
+}
+
+.asd {
+    max-width: 501px !important;
+    width: 100% !important;
+}
