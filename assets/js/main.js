@@ -37,8 +37,8 @@ $(document).ready(function () {
 var settings = {
 
     entries: entries,
-    width: 480,
-    height: 480,
+    width: 700,
+    height: 700,
     radius: '65%',
     radiusMin: 75,
     bgDraw: true,
