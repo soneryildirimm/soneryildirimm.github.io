@@ -42,6 +42,11 @@ nav .nav__logo {
   font-weight: bold;
   padding: 40px 0;
 }
+
+nav .nav__logo img {
+  width: 50px;
+}
+
 nav .nav__links {
   display: flex;
   flex-direction: column;
