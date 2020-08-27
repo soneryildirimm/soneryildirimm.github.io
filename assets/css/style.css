@@ -255,7 +255,7 @@ nav .nav__item_size-small:hover {
 }
 @media (max-width: 991px) {
   .works-page {
-    overflow-y: scroll !important;
+    overflow-y: hidden !important;
     align-items: flex-start;
   }
 
