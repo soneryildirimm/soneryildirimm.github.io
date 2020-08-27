@@ -327,4 +327,10 @@ canvas {
   width: 100% !important;
 }
 
+.works-page__content {
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 /*# sourceMappingURL=style.css.map */
