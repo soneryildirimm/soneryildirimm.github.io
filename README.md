@@ -1,1 +1,0 @@
-# soneryildirimx.github.io
