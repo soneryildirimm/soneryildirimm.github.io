@@ -7854,3 +7854,7 @@ body.colored footer .links ul li.top a {
     -webkit-animation-name: lineOut;
     animation-name: lineOut
 }
+
+.lightbox .item-close.dark {
+    color: #000;
+}
